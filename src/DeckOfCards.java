@@ -1,9 +1,9 @@
 import java.util.Random;
 
 public class DeckOfCards {
-    private Card[] deck;
+    public Card[] deck;
     private int currentCard;
-    private static final int NUMBER_OF_CARDS = 52;
+    public static final int NUMBER_OF_CARDS = 52;
     private static final Random randomNumbers = new Random();
 
     public DeckOfCards(){

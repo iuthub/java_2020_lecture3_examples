@@ -11,7 +11,7 @@ public class Craps {
     private static final int YO_LEVEN = 11;
     private static final int BOX_CARS = 12;
 
-    public static void start(){
+    public static boolean start(){
         Status gameStatus;
 
         int myPoint = 0;
@@ -44,10 +44,15 @@ public class Craps {
                 gameStatus = Status.LOST;
         }
 
-        if(gameStatus == Status.WON)
+        if(gameStatus == Status.WON) {
             System.out.println("Player Wins.");
-        else
+            return true;
+        }
+        else {
             System.out.println("Player Loses.");
+            return false;
+        }
+
     }
 
     public static int rollDice(){
